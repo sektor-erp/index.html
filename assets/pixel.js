@@ -29,7 +29,7 @@
   /* Pedido de demo: el formulario marca la sesión antes de ir a /gracias/,
      así una visita directa a esa página no cuenta como pedido. */
   if (location.pathname.indexOf('/gracias') === 0 && get('sig_lead', sessionStorage)) {
-    fbq('track', 'Lead', { content_name: 'Demo de SIG' });
+    fbq('track', 'Lead', { content_name: 'Demo de Koromo' });
     del('sig_lead', sessionStorage);
   }
 

@@ -1,4 +1,4 @@
-# Blog de Veridian
+# Blog de Koromo
 
 Blog estático, sin build step. Cada artículo es una carpeta con un `index.html`, lo que da URLs limpias (`/blog/<slug>/`) y buen SEO (cada artículo es una página real, rastreable, con su propio título, meta y JSON-LD).
 

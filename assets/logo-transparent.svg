@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
-      .logo-text {
-        font-family: 'Bebas Neue', Impact, 'Oswald', sans-serif;
-        font-size: 110px;
-        letter-spacing: 13px;
-      }
-      .word { fill: #f0ede6; }
-      .dot  { fill: #c8f542; }
-    </style>
-  </defs>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" class="logo-text">
-    <tspan class="word">VERIDIAN</tspan><tspan class="dot">.</tspan>
-  </text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -148 705.63 149.50"><g fill="#EDE7D8"><g fill="#FA8072"><path d="M0 -148h25.2v148h-25.2Z"/><clipPath id="k24"><rect x="12" y="-100" width="200" height="100"/></clipPath><g clip-path="url(#k24)"><path d="M13.19 -5.44L108.23 -117.04L90.01 -132.56L-5.03 -20.96ZM32.24 -51.04L88.11 29.93L107.81 16.34L51.95 -64.64Z"/></g></g><path fill-rule="evenodd" d="M107.2 -50a51.5 51.5 0 1 0 103 0a51.5 51.5 0 1 0 -103 0ZM132.16 -50a26.54 26.54 0 1 0 53.08 0a26.54 26.54 0 1 0 -53.08 0Z"/><path d="M227 0L227 -54.2A47.3 47.3 0 0 1 297.95 -95.16L285.95 -74.38A23.3 23.3 0 0 0 251 -54.2L251 0Z"/><path fill-rule="evenodd" d="M300.83 -50a51.5 51.5 0 1 0 103 0a51.5 51.5 0 1 0 -103 0ZM325.79 -50a26.54 26.54 0 1 0 53.08 0a26.54 26.54 0 1 0 -53.08 0Z"/><path d="M420.63 0L420.63 -54.2A47.3 47.3 0 0 1 515.23 -54.2L515.23 0L491.23 0L491.23 -54.2A23.3 23.3 0 0 0 444.63 -54.2L444.63 0Z"/><path d="M491.23 0L491.23 -54.2A47.3 47.3 0 0 1 585.83 -54.2L585.83 0L561.83 0L561.83 -54.2A23.3 23.3 0 0 0 515.23 -54.2L515.23 0Z"/><path fill-rule="evenodd" d="M602.63 -50a51.5 51.5 0 1 0 103 0a51.5 51.5 0 1 0 -103 0ZM627.59 -50a26.54 26.54 0 1 0 53.08 0a26.54 26.54 0 1 0 -53.08 0Z"/></g></svg>

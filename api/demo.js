@@ -59,7 +59,7 @@ module.exports = async (req, res) => {
     });
     try {
       await transporter.sendMail({
-        from: `"Veridian Web" <${SMTP_USER}>`,
+        from: `"Koromo Web" <${SMTP_USER}>`,
         to: DEMO_TO || SMTP_USER,
         replyTo: `"${data.nombre}" <${data.email}>`,
         subject: `Solicitud de demo — ${data.nombre}${data.empresa ? ` (${data.empresa})` : ''}`,
@@ -87,7 +87,7 @@ module.exports = async (req, res) => {
       try {
         const mail = buildConfirmation(data);
         await transporter.sendMail({
-          from: `"SIG · Veridian" <${SMTP_USER}>`,
+          from: `"Koromo" <${SMTP_USER}>`,
           to: data.email,
           replyTo: 'contacto@veridian-erp.com.ar',
           subject: mail.subject,

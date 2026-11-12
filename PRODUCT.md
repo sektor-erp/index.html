@@ -10,7 +10,7 @@ Dueños y responsables de administración de empresas (industria, comercio, serv
 
 ## Product Purpose
 
-Landing de SIG (Sistema Integrado de Gestión), el único producto de Veridian: sistema de gestión on-premise con facturación electrónica ARCA. La página tiene un solo objetivo: que el visitante pida una demo (Tally) o escriba a contacto@veridian-erp.com.ar. El blog SEO alimenta tráfico orgánico.
+Landing de Koromo (sistema de gestión empresarial), el único producto de Koromo: sistema de gestión on-premise con facturación electrónica ARCA. La página tiene un solo objetivo: que el visitante pida una demo (Tally) o escriba a contacto@veridian-erp.com.ar. El blog SEO alimenta tráfico orgánico.
 
 ## Brand Personality
 
@@ -27,7 +27,7 @@ Serio, preciso, cercano. "Empresa establecida de software" — no startup experi
 
 1. **Mostrar el producto real.** Grabaciones y capturas del ERP verdadero, sin mockups ni retoques.
 2. **Decisiones, no adornos.** Sin sombras, líneas finas, degradados ni etiquetas; tipografía grande, campos de color y el producto real.
-3. **SIG es la marca.** Papel, tinta noche y un solo azul (#2457E6), como en las piezas de video.
+3. **Koromo es la marca.** Papel, tinta noche y un solo azul (#2457E6), como en las piezas de video.
 4. **Una idea por pantalla.** Scroll largo, ritmo deliberado, sin competir por atención dentro del fold.
 5. **ARCA primero.** La facturación electrónica es el diferencial local; siempre visible y concreta.
 

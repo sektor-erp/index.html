@@ -4,7 +4,7 @@ Sistema visual de veridian-ware.com (portada, blog, /demo, /gracias y 404). Redi
 
 ## Marca
 
-Se presenta **SIG**, no Veridian (Veridian aparece en el pie). Mismos colores y letra que los videos de SIG.
+Se presenta **Koromo**, no Koromo (Koromo aparece en el pie). Mismos colores y letra que los videos de Koromo.
 
 | Token | Valor | Uso |
 |---|---|---|
