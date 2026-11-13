@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="./assets/logo-transparent.svg" alt="Koromo" width="400"/>
+  <img src="./assets/logo-transparent.svg" alt="Sektor" width="400"/>
 
   **Plataforma de gestión empresarial.**
 
-  Sitio oficial de [Koromo](https://veridian-ware.com/) — ERP on-premise con facturación electrónica ARCA.
+  Sitio oficial de [Sektor](https://veridian-ware.com/) — ERP on-premise con facturación electrónica ARCA.
 
   [🌐 Sitio en vivo](https://veridian-ware.com/) · [📧 Contacto](mailto:contacto@veridian-erp.com.ar)
 </div>
@@ -12,7 +12,7 @@
 
 ## Sobre el proyecto
 
-Sitio de presentación de **Koromo** (sistema de gestión empresarial), el único producto de Koromo: una plataforma de gestión empresarial on-premise con facturación electrónica ARCA (WSFEv1), ventas, stock, compras, producción, contabilidad, RRHH y mantenimiento.
+Sitio de presentación de **Sektor** (sistema de gestión empresarial), el único producto de Sektor: una plataforma de gestión empresarial on-premise con facturación electrónica ARCA (WSFEv1), ventas, stock, compras, producción, contabilidad, RRHH y mantenimiento.
 
 Incluye un [blog estático](./blog/README.md) con guías SEO sobre ERP, facturación ARCA y gestión.
 
@@ -79,5 +79,5 @@ Ver `DESIGN.md` para el sistema completo.
 ---
 
 <div align="center">
-  © 2026 Koromo · Buenos Aires, Argentina 🇦🇷
+  © 2026 Sektor · Buenos Aires, Argentina 🇦🇷
 </div>

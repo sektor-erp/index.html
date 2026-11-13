@@ -4,7 +4,7 @@ Sistema visual de veridian-ware.com (portada, blog, /demo, /gracias y 404). Redi
 
 ## Marca
 
-Se presenta **Koromo** (empresa y producto tienen el mismo nombre desde el 2026-11-12). Mismos colores y letra que los videos de Koromo.
+Se presenta **Sektor** (empresa y producto tienen el mismo nombre desde el 2026-11-12). Mismos colores y letra que los videos de Sektor.
 
 | Token | Valor | Uso |
 |---|---|---|
