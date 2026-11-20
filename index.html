@@ -41,7 +41,7 @@
         "url": "https://veridian-ware.com/",
         "logo": "https://veridian-ware.com/assets/icon-512.png",
         "email": "contacto@veridian-erp.com.ar",
-        "sameAs": ["https://github.com/veridian-ware"],
+        "sameAs": ["https://github.com/sektor-erp", "https://www.linkedin.com/company/sektor-erp", "https://www.youtube.com/@sektor.gestion", "https://www.instagram.com/sektor.erp"],
         "description": "Sektor es un sistema de gestión on-premise para empresas industriales con facturación electrónica ARCA.",
         "areaServed": "AR",
         "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" }
@@ -313,8 +313,7 @@
     .tour-item .mob { display: none; }
     /* pantalla real del área, debajo del título: entra desde abajo a la derecha cuando el área se activa */
     .tour-item .pantalla {
-      display: block; width: 100%; height: auto; margin-top: 24px; border-radius: 14px;
-      background: var(--night); box-shadow: 0 0 0 1px var(--line), 0 30px 60px -30px rgba(10, 14, 22, .45);
+      display: block; width: 100%; height: auto; margin-top: 24px;
       transform-origin: 0 0; transition: transform 1.6s var(--ease), opacity 1.2s var(--ease);
     }
     .tour-item:not(.on) .pantalla { opacity: 0; transform: translate(64px, 40px) scale(.94); }
@@ -363,6 +362,26 @@
     .shot { --k: 1; --q: calc(1 - var(--k)); transform: translateX(calc(var(--lado, -1) * 96px * var(--q))) rotateY(calc(var(--lado, -1) * -18deg * var(--q))) scale(calc(1 - .08 * var(--q))); transform-origin: calc(50% + var(--lado, -1) * 50%) 50%; opacity: calc(.15 + .85 * var(--k)); transition: transform .25s ease-out, opacity .25s ease-out; }
     .shot:nth-child(2) { --lado: 1; }
     .shot figcaption { opacity: calc((var(--k) - .7) * 3.4); transform: translateY(calc(12px * var(--q))); transition: opacity .25s ease-out, transform .25s ease-out; }
+
+    /* ---------- Ventana de macOS (Safari, modo oscuro) alrededor de las capturas ----------
+       Medidas en px de una ventana real de 1440 de ancho, escaladas al ancho del marco con --u */
+    .mac { container-type: inline-size; position: relative; display: block; border-radius: 12px; overflow: hidden; background: #1c1c1e;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .14), 0 22px 70px -12px rgba(0, 0, 0, .5), 0 10px 24px -10px rgba(0, 0, 0, .35); }
+    .mac > img { display: block; width: 100%; height: auto; border-radius: 0; box-shadow: none; background: #0b0b0c; }
+    .mac-bar { --u: calc(100cqw / 1440); position: relative; display: flex; align-items: center; height: calc(52 * var(--u)); padding: 0 calc(20 * var(--u));
+      background: linear-gradient(#323234, #2c2c2e); border-bottom: 1px solid #000; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1); }
+    .mac-bar .luces { display: flex; gap: calc(8 * var(--u)); }
+    .mac-bar .luces i { width: calc(12 * var(--u)); height: calc(12 * var(--u)); border-radius: 50%; background: #ff5f57; box-shadow: inset 0 0 0 calc(.5 * var(--u) + .4px) rgba(0, 0, 0, .22); }
+    .mac-bar .luces i:nth-child(2) { background: #febc2e; }
+    .mac-bar .luces i:nth-child(3) { background: #28c840; }
+    .mac-bar svg { flex: none; width: calc(17 * var(--u)); height: calc(17 * var(--u)); fill: none; stroke: #9a9a9e; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .mac-bar .nav { display: flex; gap: calc(22 * var(--u)); margin-left: calc(28 * var(--u)); }
+    .mac-bar .nav svg + svg { stroke: #5c5c60; }
+    .mac-bar .dir { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; gap: calc(6 * var(--u));
+      width: calc(520 * var(--u)); height: calc(32 * var(--u)); border-radius: calc(8 * var(--u)); background: #1f1f21; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+      font: 500 calc(13.5 * var(--u))/1 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif; color: #e6e6e8; letter-spacing: 0; }
+    .mac-bar .dir svg { width: calc(11 * var(--u)); height: calc(11 * var(--u)); stroke: #a3a3a7; stroke-width: 2; }
+    .mac-bar .der { display: flex; gap: calc(22 * var(--u)); margin-left: auto; }
 
     /* ---------- Títulos y tarjetas que siguen al scroll (--k de 0 a 1) ---------- */
     /* usan translate y scale sueltos para no pisar el transform del hover */
@@ -592,37 +611,37 @@
           <li class="tour-item on" data-v="0">
             <h3>Dashboard</h3>
             <p>Ventas, gastos, margen y caja del mes en una sola pantalla, con los vencimientos de ARCA y las alertas de cada área.</p>
-            <img class="pantalla" src="/assets/sig/dashboard-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/dashboard-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Ventas del mes</li><li>Gastos</li><li>Margen</li><li>Caja disponible</li></ul>
           </li>
           <li class="tour-item" data-v="1">
             <h3>Ventas</h3>
             <p>Del pedido a la factura electrónica, el remito y la cobranza, con la cuenta corriente de cada cliente al día.</p>
-            <img class="pantalla" src="/assets/sig/ventas-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/ventas-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Pedido</li><li>Factura ARCA</li><li>Remito</li><li>Cobranza</li></ul>
           </li>
           <li class="tour-item" data-v="2">
             <h3>Producción</h3>
             <p>Órdenes de producción con listas de materiales, MRP, eficiencia por línea y trazabilidad de lotes.</p>
-            <img class="pantalla" src="/assets/sig/produccion-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/produccion-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Lista de materiales</li><li>MRP</li><li>Orden de producción</li><li>Lote trazable</li></ul>
           </li>
           <li class="tour-item" data-v="3">
             <h3>Compras e importaciones</h3>
             <p>Solicitudes, órdenes de compra, recepción en depósito y facturas de proveedor, también para lo que llega de afuera.</p>
-            <img class="pantalla" src="/assets/sig/compras-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/compras-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Solicitud</li><li>Orden de compra</li><li>Recepción en depósito</li><li>Factura de proveedor</li></ul>
           </li>
           <li class="tour-item" data-v="4">
             <h3>Contabilidad</h3>
             <p>Los asientos se generan solos desde cada operación. Tesorería y conciliación bancaria en el mismo lugar.</p>
-            <img class="pantalla" src="/assets/sig/contabilidad-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/contabilidad-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Operación</li><li>Asiento automático</li><li>Tesorería</li><li>Conciliación bancaria</li></ul>
           </li>
           <li class="tour-item" data-v="5">
             <h3>Sueldos</h3>
             <p>Liquidación por convenio, F.931 y recibos que cada empleado firma desde el celular.</p>
-            <img class="pantalla" src="/assets/sig/rrhh-area.webp" width="1400" height="792" alt="" loading="lazy" decoding="async">
+            <div class="pantalla mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/sueldos-1600.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></div>
             <ul class="chips mob"><li>Convenio</li><li>Liquidación</li><li>F.931</li><li>Recibo firmado</li></ul>
           </li>
         </ol>
@@ -640,11 +659,11 @@
     <!-- Dos pantallas reales de Sektor (demo con datos de prueba) -->
     <section class="shots wrap" aria-label="Pantallas de Sektor">
       <figure class="shot">
-        <img src="/assets/sig/dashboard-1600.webp" srcset="/assets/sig/dashboard-900.webp 900w, /assets/sig/dashboard-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 620px" width="1600" height="900" loading="lazy" decoding="async" alt="Dashboard de Sektor con ventas, gastos, margen y caja del mes, el balance de 30 días y los vencimientos de ARCA">
+        <div class="mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/dashboard-1600.webp" srcset="/assets/sektor/dashboard-900.webp 900w, /assets/sektor/dashboard-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 620px" width="1600" height="1000" loading="lazy" decoding="async" alt="Dashboard de Sektor con ventas, gastos, margen y caja del mes, el balance de 30 días y los vencimientos de ARCA"></div>
         <figcaption><b>Dashboard.</b> Ventas, gastos, margen y caja del mes, con los vencimientos de ARCA.</figcaption>
       </figure>
       <figure class="shot">
-        <img src="/assets/sig/produccion-1600.webp" srcset="/assets/sig/produccion-900.webp 900w, /assets/sig/produccion-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 620px" width="1600" height="900" loading="lazy" decoding="async" alt="Pantalla de Producción de Sektor con las órdenes del período, la eficiencia por línea y los sectores en producción">
+        <div class="mac"><div class="mac-bar" aria-hidden="true"><span class="luces"><i></i><i></i><i></i></span><span class="nav"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2.5"/><path d="M7.5 4v12"/></svg><svg viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg><svg viewBox="0 0 20 20"><path d="m8 4.5 5.5 5.5L8 15.5"/></svg></span><span class="dir"><svg viewBox="0 0 12 12"><rect x="2" y="5.2" width="8" height="5.6" rx="1.2"/><path d="M3.8 5.2V3.8a2.2 2.2 0 0 1 4.4 0v1.4"/></svg>sektor.local</span><span class="der"><svg viewBox="0 0 20 20"><path d="M10 2.8v10M6.5 6.2 10 2.8l3.5 3.4M6 9H4.5v8h11V9H14"/></svg><svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.4"/><rect x="11" y="3" width="6" height="6" rx="1.4"/><rect x="3" y="11" width="6" height="6" rx="1.4"/><rect x="11" y="11" width="6" height="6" rx="1.4"/></svg></span></div><img src="/assets/sektor/produccion-1600.webp" srcset="/assets/sektor/produccion-900.webp 900w, /assets/sektor/produccion-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 620px" width="1600" height="1000" loading="lazy" decoding="async" alt="Pantalla de Producción de Sektor con las órdenes del período, la eficiencia por línea y los sectores en producción"></div>
         <figcaption><b>Producción.</b> Órdenes, eficiencia por línea y sectores en marcha.</figcaption>
       </figure>
     </section>
@@ -815,7 +834,7 @@
         <a href="/demo/">Pedir una demo</a>
         <a href="/privacidad/">Privacidad</a>
       </nav>
-      <p class="legal">© 2026 Sektor · Buenos Aires, Argentina. Sektor es un producto de Sektor.</p>
+      <p class="legal">© 2026 Sektor · Buenos Aires, Argentina.</p>
     </div>
   </footer>
 
