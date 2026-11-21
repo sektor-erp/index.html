@@ -72,7 +72,7 @@ module.exports = async (req, res) => {
           'Mensaje:',
           data.mensaje || '—',
           '',
-          `Enviado desde veridian-ware.com/demo/ · ${new Date().toISOString()}`,
+          `Enviado desde sektor.com.ar/demo/ · ${new Date().toISOString()}`,
         ].join('\n'),
       });
     } catch (err) {

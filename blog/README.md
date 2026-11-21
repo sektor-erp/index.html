@@ -19,7 +19,7 @@ Los estilos compartidos están en `/assets/blog.css`.
 
 2. **Copiar** `blog/erp-on-premise-vs-nube-pyme/index.html` como base y editar:
    - `<title>` y `<meta name="description">` (apuntá a lo que la gente busca; título ≤ ~60 caracteres).
-   - `<link rel="canonical">`, `og:url` y `mainEntityOfPage` → la URL nueva (`https://veridian-ware.com/blog/<slug>/`).
+   - `<link rel="canonical">`, `og:url` y `mainEntityOfPage` → la URL nueva (`https://sektor.com.ar/blog/<slug>/`).
    - El bloque JSON-LD: `headline`, `description`, `datePublished`, `dateModified`.
    - El `<h1>`, la fecha/“min de lectura” y el contenido dentro de `.prose`.
 

@@ -8,7 +8,7 @@
           "value": "www.veridian-ware.com"
         }
       ],
-      "destination": "https://veridian-ware.com/:path*",
+      "destination": "https://sektor.com.ar/:path*",
       "permanent": true
     },
     {

@@ -3,9 +3,9 @@
 
   **Plataforma de gestión empresarial.**
 
-  Sitio oficial de [Sektor](https://veridian-ware.com/) — ERP on-premise con facturación electrónica ARCA.
+  Sitio oficial de [Sektor](https://sektor.com.ar/) — ERP on-premise con facturación electrónica ARCA.
 
-  [🌐 Sitio en vivo](https://veridian-ware.com/) · [📧 Contacto](mailto:contacto@veridian-erp.com.ar)
+  [🌐 Sitio en vivo](https://sektor.com.ar/) · [📧 Contacto](mailto:contacto@veridian-erp.com.ar)
 </div>
 
 ---

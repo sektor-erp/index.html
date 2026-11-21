@@ -1,6 +1,6 @@
 # Design
 
-Sistema visual de veridian-ware.com (portada, blog, /demo, /gracias y 404). Rediseño del 2026-10-23 con Taste Skill (dirección "split stage", semilla 1330458001); reemplaza el lenguaje Microsoft Fluent anterior.
+Sistema visual de sektor.com.ar (portada, blog, /demo, /gracias y 404). Rediseño del 2026-10-23 con Taste Skill (dirección "split stage", semilla 1330458001); reemplaza el lenguaje Microsoft Fluent anterior.
 
 ## Marca
 
