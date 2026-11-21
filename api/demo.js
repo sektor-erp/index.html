@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
   if (!DEMO_DRY_RUN) {
     if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
       console.error('demo: faltan variables SMTP_* en el entorno');
-      return res.status(500).json({ error: 'El formulario no está disponible en este momento. Escribinos a contacto@veridian-erp.com.ar.' });
+      return res.status(500).json({ error: 'El formulario no está disponible en este momento. Escribinos a contacto@sektor.com.ar.' });
     }
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
@@ -77,7 +77,7 @@ module.exports = async (req, res) => {
       });
     } catch (err) {
       console.error('demo: fallo el envío SMTP', err?.message);
-      return res.status(502).json({ error: 'No pudimos registrar tu solicitud. Escribinos a contacto@veridian-erp.com.ar.' });
+      return res.status(502).json({ error: 'No pudimos registrar tu solicitud. Escribinos a contacto@sektor.com.ar.' });
     }
 
     // Confirmación al que pidió la demo. Si falla, el pedido ya quedó
@@ -89,7 +89,7 @@ module.exports = async (req, res) => {
         await transporter.sendMail({
           from: `"Sektor" <${SMTP_USER}>`,
           to: data.email,
-          replyTo: 'contacto@veridian-erp.com.ar',
+          replyTo: 'contacto@sektor.com.ar',
           subject: mail.subject,
           text: mail.text,
           html: mail.html,

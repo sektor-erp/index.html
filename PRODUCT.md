@@ -10,7 +10,7 @@ Dueños y responsables de administración de empresas (industria, comercio, serv
 
 ## Product Purpose
 
-Landing de Sektor (sistema de gestión empresarial), el único producto de Sektor: sistema de gestión on-premise con facturación electrónica ARCA. La página tiene un solo objetivo: que el visitante pida una demo (Tally) o escriba a contacto@veridian-erp.com.ar. El blog SEO alimenta tráfico orgánico.
+Landing de Sektor (sistema de gestión empresarial), el único producto de Sektor: sistema de gestión on-premise con facturación electrónica ARCA. La página tiene un solo objetivo: que el visitante pida una demo (Tally) o escriba a contacto@sektor.com.ar. El blog SEO alimenta tráfico orgánico.
 
 ## Brand Personality
 

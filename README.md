@@ -5,7 +5,7 @@
 
   Sitio oficial de [Sektor](https://sektor.com.ar/) — ERP on-premise con facturación electrónica ARCA.
 
-  [🌐 Sitio en vivo](https://sektor.com.ar/) · [📧 Contacto](mailto:contacto@veridian-erp.com.ar)
+  [🌐 Sitio en vivo](https://sektor.com.ar/) · [📧 Contacto](mailto:contacto@sektor.com.ar)
 </div>
 
 ---
@@ -47,7 +47,7 @@ Variables de entorno requeridas en Vercel (Settings → Environment Variables):
 |---|---|
 | `SMTP_HOST` | `smtp.zoho.com` |
 | `SMTP_PORT` | `465` |
-| `SMTP_USER` | `contacto@veridian-erp.com.ar` |
+| `SMTP_USER` | `contacto@sektor.com.ar` |
 | `SMTP_PASS` | App password de Zoho (Zoho Mail → Security → App Passwords) |
 | `DEMO_TO` | (opcional) casilla destino si no es la misma que `SMTP_USER` |
 
